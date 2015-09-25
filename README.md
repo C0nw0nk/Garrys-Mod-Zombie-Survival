@@ -4,4 +4,4 @@ This open source repository of scripts (map profiles) I have written up for maps
 
 
 Install these map profiles to the following directory you have zombie survival installed upon your local pc or server.
-"/garrysmod/gamemodes/zombiesurvival/gamemode/maps/*"
+"/garrysmod/gamemodes/zombiesurvival/gamemode/maps/*.lua"
