@@ -21,7 +21,7 @@ hook.Add("InitPostEntityMap", "Adding", function()
 				ent2:SetAngles(ent:GetAngles())
 				ent2:Spawn()
 			end
-		end		
+		end
 		
 		--Remove the door that traps people inside a room on top of the scaffolding (What was the point of this?)
 		for _, ent in pairs(ents.FindByModel("*176")) do
@@ -242,6 +242,17 @@ hook.Add("InitPostEntityMap", "Adding", function()
 			ent2:Spawn()
 		end
 		
+		--Prevent head crabs being able to jump on top of humans going up the elevator on scaffolding freezing it.
+		local ent2 = ents.Create("prop_dynamic_override")
+		if ent2:IsValid() then
+			ent2:SetPos(Vector(-1414, 650, 2290))
+			ent2:SetAngles(Angle(0, 90, 0))
+			ent2:SetKeyValue("solid", "6")
+			ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
+			ent2:SetNoDraw(true)
+			ent2:Spawn()
+		end
+		
 	--End simple timer
 	end)
 	
@@ -282,7 +293,7 @@ hook.Add("InitPostEntityMap", "Adding", function()
 	
 	--Door way at valves with alarm trigger kill anyone on lower floors where zombies can't get to them. (Forces zombies behind to stick with the group of survivors)
 	local posMin = Vector(-3621.0952148438, 3167.96875, 432.03125)
-	local posMax = Vector(927.96875, -1065.2985839844, 6010.6059570313)
+	local posMax = Vector(927.96875, -1065.2985839844, 2220.06640625)
 	for k,v in pairs(ents.FindInBox(posMin, posMax)) do
 		--Find out if entity inside the box is a player
 		if v:IsPlayer() then
@@ -312,7 +323,7 @@ hook.Add("InitPostEntityMap", "Adding", function()
 	
 	--Blow up fire extinguisher on the wall kill anyone lower than the scaffolding (Forces zombies behind to stick with the group of survivors)
 	local posMin = Vector(-3621.0952148438, 3167.96875, 2220.06640625)
-	local posMax = Vector(927.96875, -1065.2985839844, 6010.6059570313)
+	local posMax = Vector(927.96875, -1065.2985839844, 2540.06640625)
 	for k,v in pairs(ents.FindInBox(posMin, posMax)) do
 		--Find out if entity inside the box is a player
 		if v:IsPlayer() then
@@ -342,7 +353,7 @@ hook.Add("InitPostEntityMap", "Adding", function()
 	
 	--Climb of desk through hole in celling kill people still on lower floors under that hole. (Forces zombies behind to stick with the group of survivors)
 	local posMin = Vector(-3621.0952148438, 3167.96875, 2540.06640625)
-	local posMax = Vector(927.96875, -1065.2985839844, 6010.6059570313)
+	local posMax = Vector(927.96875, -1065.2985839844, 5200.06640625)
 	for k,v in pairs(ents.FindInBox(posMin, posMax)) do
 		--Find out if entity inside the box is a player
 		if v:IsPlayer() then
