@@ -1,30 +1,4 @@
 hook.Add("InitPostEntityMap", "Adding", function()
-
-	--Bridge for zombies to destroy usually you nail the tire at this part.
-	local ent2 = ents.Create("prop_dynamic_override")
-	if ent2:IsValid() then
-		ent2:SetPos(Vector(-2605, 1754, -726))
-		ent2:SetAngles(Angle(90, 0, 90))
-		ent2:SetKeyValue("solid", "6")
-		ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
-		ent2:Spawn()
-	end
-	local ent2 = ents.Create("prop_dynamic_override")
-	if ent2:IsValid() then
-		ent2:SetPos(Vector(-2425, 1764, -766))
-		ent2:SetAngles(Angle(105, 0, 90))
-		ent2:SetKeyValue("solid", "6")
-		ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
-		ent2:Spawn()
-	end
-	local ent2 = ents.Create("prop_dynamic_override")
-	if ent2:IsValid() then
-		ent2:SetPos(Vector(-2245, 1764, -815))
-		ent2:SetAngles(Angle(105, 0, 90))
-		ent2:SetKeyValue("solid", "6")
-		ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
-		ent2:Spawn()
-	end
 	
 	--Prevent players breaking into the loot room at end of the map unless they have the babies to grant them access
 	local ent2 = ents.Create("prop_dynamic_override")
