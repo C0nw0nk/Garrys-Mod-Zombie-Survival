@@ -1,5 +1,5 @@
 hook.Add("InitPostEntityMap", "Adding", function()
-	
+	timer.Simple(1, function()
 	--Prevent players breaking into the loot room at end of the map unless they have the babies to grant them access
 	local ent2 = ents.Create("prop_dynamic_override")
 	if ent2:IsValid() then
@@ -11,6 +11,22 @@ hook.Add("InitPostEntityMap", "Adding", function()
 		ent2:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
 		ent2:Spawn()
 	end
+	
+	--Remove batteries on bridge.
+	for _, ent in pairs(ents.FindByModel("models/items/car_battery01.mdl")) do
+		ent:Remove()
+	end
+
+	--Remove guns in the room before the bridge.
+	for _, ent in pairs(ents.FindInSphere(Vector(-1696, 861, -682), 400)) do
+		if (ent:GetModel() == "models/weapons/w_smg_mp5.mdl") then
+			ent:Remove()
+		end
+		if (ent:GetModel() == "models/weapons/w_rif_m4a1.mdl") then
+			ent:Remove()
+		end
+	end
+	end)
 	
 timer.Create("Stop throwing props out of bounds", 1, 0, function()
 --Train tracks
