@@ -41,6 +41,26 @@ hook.Add("InitPostEntityMap", "Adding", function()
 		ent2:Spawn()
 	end
 	
+	--World hints
+	local ent = ents.Create("point_worldhint")
+	if ent:IsValid() then
+		ent:SetPos(Vector(-1486, 1292, -80))
+		ent:SetParent(self)
+		ent:Spawn()
+		ent:SetViewable(TEAM_HUMAN)
+		ent:SetRange(1000)
+		ent:SetHint("Zombies come from here!")
+	end
+	local ent = ents.Create("point_worldhint")
+	if ent:IsValid() then
+		ent:SetPos(Vector(-1351, -2464, -80))
+		ent:SetParent(self)
+		ent:Spawn()
+		ent:SetViewable(TEAM_HUMAN)
+		ent:SetRange(1000)
+		ent:SetHint("Zombies come from here!")
+	end
+
 end)
 
 --Start credits hook
