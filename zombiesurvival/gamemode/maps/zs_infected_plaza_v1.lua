@@ -141,6 +141,35 @@ hook.Add("InitPostEntityMap", "Adding", function()
 		end
 		--End house anti skycade.
 		
+		--World hints
+		local ent = ents.Create("point_worldhint")
+		if ent:IsValid() then
+			ent:SetPos(Vector(-5385, 644, 620))
+			ent:SetParent(self)
+			ent:Spawn()
+			ent:SetViewable(TEAM_HUMAN)
+			ent:SetRange(1000)
+			ent:SetHint("Zombies come from here!")
+		end
+		local ent = ents.Create("point_worldhint")
+		if ent:IsValid() then
+			ent:SetPos(Vector(-3240, 2124, 70))
+			ent:SetParent(self)
+			ent:Spawn()
+			ent:SetViewable(TEAM_HUMAN)
+			ent:SetRange(1000)
+			ent:SetHint("Zombies come from here!")
+		end
+		local ent = ents.Create("point_worldhint")
+		if ent:IsValid() then
+			ent:SetPos(Vector(-2310, -1020, 70))
+			ent:SetParent(self)
+			ent:Spawn()
+			ent:SetViewable(TEAM_HUMAN)
+			ent:SetRange(1000)
+			ent:SetHint("Zombies come from here!")
+		end
+		
 end)
 
 --Start credits hook
