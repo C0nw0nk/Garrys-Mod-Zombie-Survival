@@ -28,6 +28,8 @@ end)
 --(By keeping these credits in motivates me to keep fixing maps.)
 --Removing or hiding this hook is a violation of the AGPL licensing agreement and the additional conditions. See the LICENSE.txt file that came with the script.
 hook.Add("PlayerInitialSpawn", "credits hook", function(ply)
+	--Console command to help prevent people from crashing.
+	ply:ConCommand("r_drawmodeldecals 0")
 	timer.Simple(60, function()
 		ply:PrintMessage(HUD_PRINTTALK, "Lua map fixes by C0nw0nk")
 	end)
