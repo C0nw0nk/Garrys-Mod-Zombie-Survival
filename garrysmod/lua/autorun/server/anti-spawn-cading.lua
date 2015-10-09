@@ -1,4 +1,5 @@
 --You should realy use my map profiles to accomplish this since every map has a different zombie spawn size/area.
+--I also recommend not using this on objective maps for obvious reasons.
 hook.Add("ShouldCollide", "Anti-Spawn Cading", function(player, object)
 	--Get the zombie spawn.
 	for k, v in pairs(ents.FindByClass("info_player_zombie")) do
