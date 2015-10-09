@@ -1,3 +1,25 @@
+hook.Add("InitPostEntityMap", "Adding", function()
+	--Prevent people getting stuck in the vents.
+	local ent2 = ents.Create("prop_dynamic_override")
+	if ent2:IsValid() then
+		ent2:SetPos(Vector(-4050, -5061, 80))
+		ent2:SetAngles(Angle(90, 0, 0))
+		ent2:SetKeyValue("solid", "6")
+		ent2:SetModel(Model("models/props_debris/wood_board06a.mdl"))
+		ent2:SetNoDraw(true)
+		ent2:Spawn()
+	end
+	local ent2 = ents.Create("prop_dynamic_override")
+	if ent2:IsValid() then
+		ent2:SetPos(Vector(-3994, -3950, 80))
+		ent2:SetAngles(Angle(90, 0, 90))
+		ent2:SetKeyValue("solid", "6")
+		ent2:SetModel(Model("models/props_debris/wood_board06a.mdl"))
+		ent2:SetNoDraw(true)
+		ent2:Spawn()
+	end
+end)
+
 --Disable Detpacks and Grenades to prevent client side crashes on this map
 for k, v in pairs(GM.Items) do
 if v['Name'] == "Grenade" then
