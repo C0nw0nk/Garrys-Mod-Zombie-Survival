@@ -230,6 +230,42 @@ hook.Add("InitPostEntityMap", "Adding", function()
 			ent2:SetNoDraw(true)
 			ent2:Spawn()
 		end
+		local ent2 = ents.Create("prop_dynamic_override")
+		if ent2:IsValid() then
+			ent2:SetPos(Vector(-566, 1330, 2110))
+			ent2:SetAngles(Angle(0, 90, 0))
+			ent2:SetKeyValue("solid", "6")
+			ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
+			ent2:SetNoDraw(true)
+			ent2:Spawn()
+		end
+		local ent2 = ents.Create("prop_dynamic_override")
+		if ent2:IsValid() then
+			ent2:SetPos(Vector(-870, 1330, 2150))
+			ent2:SetAngles(Angle(0, 90, 90))
+			ent2:SetKeyValue("solid", "6")
+			ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
+			ent2:SetNoDraw(true)
+			ent2:Spawn()
+		end
+		local ent2 = ents.Create("prop_dynamic_override")
+		if ent2:IsValid() then
+			ent2:SetPos(Vector(-1060, 1330, 2150))
+			ent2:SetAngles(Angle(0, 90, 90))
+			ent2:SetKeyValue("solid", "6")
+			ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
+			ent2:SetNoDraw(true)
+			ent2:Spawn()
+		end
+		local ent2 = ents.Create("prop_dynamic_override")
+		if ent2:IsValid() then
+			ent2:SetPos(Vector(-1182, 1040, 2110))
+			ent2:SetAngles(Angle(0, 90, 0))
+			ent2:SetKeyValue("solid", "6")
+			ent2:SetModel(Model("models/props_lab/blastdoor001c.mdl"))
+			ent2:SetNoDraw(true)
+			ent2:Spawn()
+		end
 		
 		--Prevent players being throw of the scaffolding by crouch jumping.
 		local ent2 = ents.Create("prop_dynamic_override")
