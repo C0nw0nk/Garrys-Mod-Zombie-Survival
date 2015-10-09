@@ -2,8 +2,8 @@
 hook.Add("ShouldCollide", "Anti-Spawn Cading", function(player, object)
 	--Get the zombie spawn.
 	for k, v in pairs(ents.FindByClass("info_player_zombie")) do
-		--Timer runs in loop every second.
-		timer.Create("Check for spawn cading", 1, 0, function()
+		--Timer runs in loop on every frame.
+		timer.Create("Check for spawn cading", 0, 0, function()
 			--Get entities within the zombie spawn.
 			for _, ent in pairs(ents.FindInSphere(v:GetPos(), 400)) do
 				--If entities within the zombie spawn are props.
