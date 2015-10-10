@@ -21,7 +21,7 @@ hook.Add("ShouldCollide", "Anti-Spawn Cading", function(player, object)
 	if player:IsValid() and player:IsPlayer() then
 		if player:Team() == TEAM_HUMAN then
 			--Set collision group for props outside of the zombie spawn.
-			if string.match(ent:GetClass(), "prop_*") then
+			if string.match(object:GetClass(), "prop_*") then
 				object:SetCollisionGroup(COLLISION_GROUP_NONE)
 			end
 		end
