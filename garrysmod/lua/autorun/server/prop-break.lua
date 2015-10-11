@@ -67,9 +67,7 @@ hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 			end
 		end
 	end
-	
-	--Define this to make it so that all props can not be broken 
-	--if string.match(ent:GetClass(), "prop_*") then
+
 	--Prevent players destroying weapons.
 	if string.match(ent:GetClass(), "prop_weapon") then
 		if attacker:IsValid() and attacker:IsPlayer() then
