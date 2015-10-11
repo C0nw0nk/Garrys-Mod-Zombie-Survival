@@ -11,6 +11,15 @@ end)
 
 hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 	local attacker = attacker:GetAttacker()
+	
+	--Output who on the zombie team is attacking / Destroying flesh creeper nests.
+	if string.match(ent:GetClass(), "prop_creepernest") then
+		if attacker:IsValid() and attacker:IsPlayer() then
+			if attacker:Team() == TEAM_UNDEAD then
+				PrintTranslatedMessage(HUD_PRINTCONSOLE, " "..attacker:Name().." "..attacker:SteamID().." attacked "..ent:GetModel().." ")
+			end
+		end
+	end
 
 	--Prevent players destroying props in wave 1 or the selection of who will become a zombie.
 	--Starting wave of who will become a zombie.
