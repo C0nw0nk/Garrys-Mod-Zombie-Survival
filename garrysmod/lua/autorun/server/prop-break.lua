@@ -12,6 +12,22 @@ end)
 hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 	local attacker = attacker:GetAttacker()
 	
+	--Prevent Zombies trolling destroying props the shade is holding.
+	--If entity is a prop.
+	if string.match(ent:GetClass(), "prop_*") then
+		--If attacker is valid a player and on the zombie team.
+		if attacker:IsValid() and attacker:IsPlayer() and attacker:Team() == TEAM_UNDEAD then
+			--Find the prop the shade is holding.
+			for k, v in pairs(ents.FindByClass("env_shadecontrol")) do
+				--If the prop is valid and the coordinates match with those of attack.
+				if v:IsValid() and v:GetPos() == ent:GetPos() then
+					--Prevent the prop taking damage.
+					return true
+				end
+			end
+		end
+	end
+	
 	--Output who on the zombie team is attacking / Destroying flesh creeper nests.
 	if string.match(ent:GetClass(), "prop_creepernest") then
 		if attacker:IsValid() and attacker:IsPlayer() then
