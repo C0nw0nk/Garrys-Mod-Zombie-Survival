@@ -9,6 +9,7 @@ hook.Add("PropBroken", "PropBroken.Alert", function(ent, attacker)
 	end
 end)
 
+--Output who as a fleshcreeper on zombie team is destroying nests
 hook.Add("NestDestroyed", "Nest.Destroyed", function(ent, attacker)
 	--Check the attacker is valid a player and the attacker is on the zombie team.
 	if attacker:IsValid() and attacker:IsPlayer() and attacker:Team()== TEAM_UNDEAD then
