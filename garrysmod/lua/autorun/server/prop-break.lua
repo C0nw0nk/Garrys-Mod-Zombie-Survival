@@ -19,7 +19,7 @@ hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 		if attacker:IsValid() and attacker:IsPlayer() and attacker:Team() == TEAM_UNDEAD then
 			--Find the prop the shade is holding.
 			for k, v in pairs(ents.FindByClass("env_shadecontrol")) do
-				--If the prop is valid and the coordinates match with those of attack.
+				--If entity is valid and the coordinates of the entity match with those of the prop the zombie is attacking.
 				if v:IsValid() and v:GetPos() == ent:GetPos() then
 					--Prevent the prop taking damage.
 					return true
