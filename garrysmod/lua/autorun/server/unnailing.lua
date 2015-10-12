@@ -4,7 +4,7 @@ hook.Add("OnNailRemoved", "Output who removes dead players nails", function(nail
 	if remover and remover:IsValid() and remover:IsPlayer() then
 		local deployer = nail:GetDeployer()
 		if deployer:IsValid() and deployer ~= remover and deployer:Team() == TEAM_UNDEAD then
-			PrintTranslatedMessage(HUD_PRINTCONSOLE, " "..remover:Name().." "..attacker:SteamID().." removed a nail belonging to *DEAD* "..deployer:Name().." *DEAD* ")
+			PrintTranslatedMessage(HUD_PRINTCONSOLE, " "..remover:Name().." "..remover:SteamID().." removed a nail belonging to *DEAD* "..deployer:Name().." *DEAD* ")
 		end
 	end
 end)
