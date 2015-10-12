@@ -9,6 +9,16 @@ hook.Add("PropBroken", "PropBroken.Alert", function(ent, attacker)
 	end
 end)
 
+hook.Add("NestDestroyed", "Nest.Destroyed", function(ent, attacker)
+	--Check the attacker is valid a player and the attacker is on the zombie team.
+	if attacker:IsValid() and attacker:IsPlayer() and attacker:Team()== TEAM_UNDEAD then
+		--Check the attacker on the zombie team is a Flesh Creeper.
+		if attacker:GetZombieClassTable().Name == "Flesh Creeper" then
+			PrintTranslatedMessage(HUD_PRINTCONSOLE, " "..attacker:Name().." "..attacker:SteamID().." destroyed a Flesh Creeper nest! ")
+		end
+	end
+end)
+
 hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 	local attacker = attacker:GetAttacker()
 	
@@ -24,15 +34,6 @@ hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 					--Prevent the prop taking damage.
 					return true
 				end
-			end
-		end
-	end
-	
-	--Output who on the zombie team is attacking / Destroying flesh creeper nests.
-	if string.match(ent:GetClass(), "prop_creepernest") then
-		if attacker:IsValid() and attacker:IsPlayer() then
-			if attacker:Team() == TEAM_UNDEAD then
-				PrintTranslatedMessage(HUD_PRINTCONSOLE, " "..attacker:Name().." "..attacker:SteamID().." attacked "..ent:GetModel().." ")
 			end
 		end
 	end
