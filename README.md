@@ -25,3 +25,7 @@ Prevented humans destroying guns or ammo on the floor. (Players would do this th
 Prevented humans getting stuck in both lamps and turrets in the floating animation.
 
 Outputting to console who unails a dead persons cade. (Inside a piano cade on wave 6 and a Kliener picks up a hammer this is the worst thing in the world.)
+
+Fixed humans prop launching by nailing a prop down and launching with a prop they place or nail.
+
+Disabling casting of dynamic shadows to improve performance.
