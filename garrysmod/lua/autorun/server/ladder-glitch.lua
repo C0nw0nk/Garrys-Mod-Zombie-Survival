@@ -11,7 +11,7 @@ hook.Add("CanPlayerSuicide", "Ladder.Glitch", function(player)
 		--If the player is close enough to the ladder to grab it do not allow them to kill themselves.
 		for _, ent in pairs(ents.FindInSphere(player:GetPos(),100)) do
 			--If the class name near the player matches with any kind of ladder classes.
-			if string.match(ent:GetClass(), "info_ladder*") or string.match(ent:GetClass(), "func_useableladder") then
+			if string.match(ent:GetClass(), "info_ladder*") or string.match(ent:GetClass(), "func_useableladder") or string.match(ent:GetClass(), "func_ladder*") then
 				--Do not allow player to suicide
 				return false
 			end
