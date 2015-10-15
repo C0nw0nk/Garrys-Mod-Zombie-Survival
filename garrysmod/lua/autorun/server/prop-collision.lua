@@ -4,21 +4,21 @@ hook.Add("ShouldCollide", "Prop Collision", function(player, object)
 		if player:Team() == TEAM_HUMAN then
 			--Set collision group for spotlamps with humans.
 			if string.match(object:GetClass(), "prop_spotlamp*") then
-				object:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
+				return false
 			end
 			--Set collision group for turrets with humans.
 			if string.match(object:GetClass(), "prop_gunturret*") then
-				object:SetCollisionGroup(COLLISION_GROUP_DEBRIS_TRIGGER)
+				return false
 			end
 		end
 		if player:Team() == TEAM_UNDEAD then
 			--Set collision group for spotlamps with zombies.
 			if string.match(object:GetClass(), "prop_spotlamp*") then
-				object:SetCollisionGroup(COLLISION_GROUP_NONE)
+				return true
 			end
 			--Set collision group for turrets with zombies.
 			if string.match(object:GetClass(), "prop_gunturret*") then
-				object:SetCollisionGroup(COLLISION_GROUP_NONE)
+				return true
 			end
 		end
 	end
