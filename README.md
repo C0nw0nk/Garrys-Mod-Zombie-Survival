@@ -29,3 +29,5 @@ Outputting to console who unails a dead persons cade. (Inside a piano cade on wa
 Fixed humans prop launching by nailing a prop down and launching with a prop they place or nail.
 
 Disabling casting of dynamic shadows to improve performance.
+
+Fix HL2 ladder death glitching. (Killing yourself on a ladder as soon as you press your USE key to grapple onto prevents the ladder being used. You will also respawn on the ladder.)
