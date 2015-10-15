@@ -30,4 +30,4 @@ Fixed humans prop launching by nailing a prop down and launching with a prop the
 
 Disabling casting of dynamic shadows to improve performance.
 
-Fix HL2 ladder death glitching. (Killing yourself on a ladder as soon as you press your USE key to grapple onto prevents the ladder being used. You will also respawn on the ladder.)
+Fixed HL2 ladder death glitching. (Killing yourself on a ladder as soon as you press your USE key to grapple onto prevents the ladder being used. You will also respawn on the ladder.)
