@@ -49,7 +49,8 @@ end)
 --Prevent players breaking into the loot room at end of the map unless they have the babies to grant them access
 hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 	local attacker = attacker:GetAttacker()
-	if string.match(ent:GetModel(), "*107") then
+	--*107 Door to loot room, *64 Plug and elevator.
+	if string.match(ent:GetModel(), "*107") or string.match(ent:GetModel(), "*64") then
 		if attacker:IsValid() and attacker:IsPlayer() then
 			if attacker:Team() == TEAM_HUMAN then
 				return true
