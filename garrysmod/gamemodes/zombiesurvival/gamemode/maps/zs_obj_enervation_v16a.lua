@@ -53,9 +53,9 @@ hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 	--*107 Door to loot room, *64 Plug and elevator.
 	if string.match(ent:GetModel(), "*107") or string.match(ent:GetModel(), "*64") then
 		if attacker:IsValid() and attacker:IsPlayer() then
-			if attacker:Team() == TEAM_HUMAN then
+			--if attacker:Team() == TEAM_HUMAN then
 				return true
-			end
+			--end
 		end
 	end
 end)
