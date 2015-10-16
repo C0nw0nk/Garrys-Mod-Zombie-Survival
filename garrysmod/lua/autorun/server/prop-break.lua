@@ -1,6 +1,6 @@
 hook.Add("PropBroken", "PropBroken.Alert", function(ent, attacker)
 	--If player breaks a prop output who broke the prop to console.
-	if string.match(ent:GetClass(), "prop_*") then
+	if string.match(ent:GetClass(), "prop_*") or string.match(ent:GetClass(), "func_physbox*") then
 		if attacker:IsValid() and attacker:IsPlayer() then
 			if attacker:Team() == TEAM_HUMAN then
 				PrintTranslatedMessage(HUD_PRINTCONSOLE, " "..attacker:Name().." "..attacker:SteamID().." broke prop "..ent:GetModel().." ")
