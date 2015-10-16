@@ -36,8 +36,10 @@ end
 local posMin = Vector(-249.66389465332, 1270.4135742188, -128.03125)
 local posMax = Vector(-650.50866699219, 1120.03125, -246.8059387207)
 for k,v in pairs(ents.FindInBox(posMin, posMax)) do
+	if v:IsValid() and v:IsPlayer() then
 	v:SetPos(Vector(-786, 1166, -671))
 	v:Spawn()
+	end
 end
 
 end)
