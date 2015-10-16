@@ -46,7 +46,8 @@ end)
 	
 end)
 
---Prevent players breaking into the loot room at end of the map unless they have the babies to grant them access
+--Prevent players breaking into the loot room at end of the map unless they have the babies to grant them access.
+--Prevent players destroying the plug on the elevator.
 hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 	local attacker = attacker:GetAttacker()
 	--*107 Door to loot room, *64 Plug and elevator.
