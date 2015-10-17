@@ -30,6 +30,6 @@ Fixed humans prop launching by nailing a prop down and launching with a prop the
 
 Disabling casting of dynamic shadows to improve performance.
 
-Fixed HL2 ladder death glitching. (Killing yourself on a ladder as soon as you press your USE key to grapple onto prevents the ladder being used. You will also respawn on the ladder.)
+Fixed HL2 ladder death glitching. (Killing yourself on a ladder as soon as you press your USE key to grapple onto prevents the ladder being used. You will also respawn on the ladder.) If you will be boss do this in intermission and spawn on the ladder as boss, if the ladder is inside the humans cade this is awful.
 
 Fixed Humans and Zombies getting stuck inside of eachother or on their heads.
