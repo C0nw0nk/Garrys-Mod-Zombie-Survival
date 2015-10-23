@@ -1,24 +1,26 @@
---This hook is to prevent humans getting stuck in the floating animation on lamp's and turrets.
-hook.Add("ShouldCollide", "Prop Collision", function(player, object)
+--This hook is to prevent humans getting stuck in the floating animation on lamp's, turrets, arsenal and resupply box.
+hook.Add("ShouldCollide", "Player-stuck-on-prop", function(player, object)
 	if player:IsValid() and player:IsPlayer() then
 		if player:Team() == TEAM_HUMAN then
-			--Set collision group for spotlamps with humans.
-			if string.match(object:GetClass(), "prop_spotlamp*") then
-				return false
+			if string.match(object:GetClass(), "prop_spotlamp*") and player:GetPhysicsObject():IsPenetrating() != false then
+				if player:GetBarricadeGhosting() == false then
+					player:SetBarricadeGhosting(true)
+				end
 			end
-			--Set collision group for turrets with humans.
-			if string.match(object:GetClass(), "prop_gunturret*") then
-				return false
+			if string.match(object:GetClass(), "prop_gunturret*") and player:GetPhysicsObject():IsPenetrating() != false then
+				if player:GetBarricadeGhosting() == false then
+					player:SetBarricadeGhosting(true)
+				end
 			end
-		end
-		if player:Team() == TEAM_UNDEAD then
-			--Set collision group for spotlamps with zombies.
-			if string.match(object:GetClass(), "prop_spotlamp*") then
-				return true
+			if string.match(object:GetClass(), "prop_arsenalcrate*") and player:GetPhysicsObject():IsPenetrating() != false then
+				if player:GetBarricadeGhosting() == false then
+					player:SetBarricadeGhosting(true)
+				end
 			end
-			--Set collision group for turrets with zombies.
-			if string.match(object:GetClass(), "prop_gunturret*") then
-				return true
+			if string.match(object:GetClass(), "prop_resupplybox*") and player:GetPhysicsObject():IsPenetrating() != false then
+				if player:GetBarricadeGhosting() == false then
+					player:SetBarricadeGhosting(true)
+				end
 			end
 		end
 	end
