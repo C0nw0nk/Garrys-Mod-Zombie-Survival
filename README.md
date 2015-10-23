@@ -12,21 +12,21 @@ Install these map profiles to the following directory you have zombie survival i
 # Server Auto Run Hook's Features :
 Prevented client side crashes by changing client console variables upon connection.
 
-Outputting to console who breaks a prop "all methods of attack including explosives and jumping ontop of the prop".
+Outputting to console who breaks a prop "all methods of attack including explosives and jumping ontop of the prop". (Players would do this then join the zombie team sabotaging humans survival.)
 
-Outputting to console who on the Zombie team is attacking and destroying fleshcreeper nests.
+Outputting to console who on the Zombie team is attacking and destroying fleshcreeper nests. (Flesh creepers would build a nest realy far away and destroy the closest nests trolling.)
 
-Prevented Zombies trolling attacking and destroying props the shade is holding.
+Prevented Zombies trolling attacking and destroying props the shade is holding. (Zombies would do this to prevent the shade killing their friends etc.)
 
-Prevented humans destroying props in wave 1 or the selection of who will become a zombie. (On day zero this was extra annoying.)
+Prevented humans destroying props in wave 1 or the selection of who will become a zombie. (Players would do this and join the zombie team. Sabotage!)
 
 Prevented humans destroying guns or ammo on the floor. (Players would do this then join the zombie team)
 
-Prevented humans getting stuck in both lamps and turrets in the floating animation.
+Prevented humans getting stuck in both lamps and turrets in the floating animation. (Turret or spot lamp inbetween walls or cades occasionaly humans would get stuck on the sloped parts of the prop, Stuck in the jump or floating/crouching animation unable to phase out.)
 
 Outputting to console who unails a dead persons cade. (Inside a piano cade on wave 6 and a Kliener picks up a hammer this is the worst thing in the world.)
 
-Fixed humans prop launching by nailing a prop down and launching with a prop they place or nail.
+Fixed humans prop launching by nailing a prop down and launching with a prop they place or nail.(kills from one human killing another by launching a prop at them would be prop physics or func physbox.)
 
 Disabling casting of dynamic shadows to improve performance.
 
