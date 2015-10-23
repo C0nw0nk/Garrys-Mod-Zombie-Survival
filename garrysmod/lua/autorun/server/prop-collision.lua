@@ -8,12 +8,6 @@ hook.Add("ShouldCollide", "Player-stuck-on-prop", function(player, object)
 			if string.match(object:GetClass(), "prop_gunturret*") then
 				return false
 			end
-			if string.match(object:GetClass(), "prop_arsenalcrate*") then
-				return false
-			end
-			if string.match(object:GetClass(), "prop_resupplybox*") then
-				return false
-			end
 		end
 	end
 end)
