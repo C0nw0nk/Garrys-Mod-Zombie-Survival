@@ -3,24 +3,16 @@ hook.Add("ShouldCollide", "Player-stuck-on-prop", function(player, object)
 	if player:IsValid() and player:IsPlayer() then
 		if player:Team() == TEAM_HUMAN then
 			if string.match(object:GetClass(), "prop_spotlamp*") and player:GetPhysicsObject():IsPenetrating() != false then
-				if player:GetBarricadeGhosting() == false then
-					player:SetBarricadeGhosting(true)
-				end
+				return false
 			end
 			if string.match(object:GetClass(), "prop_gunturret*") and player:GetPhysicsObject():IsPenetrating() != false then
-				if player:GetBarricadeGhosting() == false then
-					player:SetBarricadeGhosting(true)
-				end
+				return false
 			end
 			if string.match(object:GetClass(), "prop_arsenalcrate*") and player:GetPhysicsObject():IsPenetrating() != false then
-				if player:GetBarricadeGhosting() == false then
-					player:SetBarricadeGhosting(true)
-				end
+				return false
 			end
 			if string.match(object:GetClass(), "prop_resupplybox*") and player:GetPhysicsObject():IsPenetrating() != false then
-				if player:GetBarricadeGhosting() == false then
-					player:SetBarricadeGhosting(true)
-				end
+				return false
 			end
 		end
 	end
