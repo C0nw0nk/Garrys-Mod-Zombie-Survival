@@ -22,8 +22,6 @@ Prevented humans destroying props in wave 1 or the selection of who will become 
 
 Prevented humans destroying guns or ammo on the floor. (Players would do this then join the zombie team)
 
-Prevented humans getting stuck in both lamps and turrets in the floating animation. (Turret or spot lamp inbetween walls or cades occasionaly humans would get stuck on the sloped parts of the prop, Stuck in the jump or floating/crouching animation unable to phase out.)
-
 Outputting to console who unails a dead persons cade. (Inside a piano cade on wave 6 and a Kliener picks up a hammer this is the worst thing in the world.)
 
 Fixed humans prop launching by nailing a prop down and launching with a prop they place or nail.(kills from one human killing another by launching a prop at them would be prop physics or func physbox.)
