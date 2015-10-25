@@ -5,7 +5,7 @@ hook.Add("InitPostEntityMap", "Adding", function()
 		ent:Remove()
 	end
 end)
---Remove shadows from player spawn.
+--Remove shadows from players when they spawn.
 hook.Add("PlayerSpawn", "PlayerSpawn.Remove.Shadows", function(player)
 	player:DrawShadow(false)
 end)
