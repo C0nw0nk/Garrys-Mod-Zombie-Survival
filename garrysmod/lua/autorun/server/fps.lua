@@ -9,7 +9,7 @@ end)
 hook.Add("PlayerSpawn", "PlayerSpawn.Remove.Shadows", function(player)
 	player:DrawShadow(false)
 end)
---Remove and disable shadows on props spawned in func_physbox and doors that have been taken of their hinges.
+--Remove and disable shadows on props spawned in func_physbox and doors that have been taken of their hinges etc.
 hook.Add("Think", "Think.Remove.Shadows", function()
 	for _, ent in pairs(ents.FindByClass("prop_*")) do
 		ent:DrawShadow(false)
