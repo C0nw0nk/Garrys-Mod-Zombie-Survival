@@ -24,4 +24,8 @@ hook.Add("Think", "Think.Remove.Shadows", function()
 		ent:DrawShadow(false)
 		ent:SetKeyValue("disableshadows", 1)
 	end
+	for _, ent in pairs(ents.FindByClass("env_*")) do
+		ent:DrawShadow(false)
+		ent:SetKeyValue("disableshadows", 1)
+	end
 end)
