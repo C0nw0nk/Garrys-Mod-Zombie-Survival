@@ -8,6 +8,10 @@ hook.Add("InitPostEntityMap", "Remove.Shadow.Control", function()
 	for _, ent in pairs(ents.FindByClass("func_precipitation")) do
 		ent:Remove()
 	end
+	--Remove laggy smoke.
+	for _, ent in pairs(ents.FindByClass("func_smokevolume")) do
+		ent:Remove()
+	end
 end)
 --Remove shadows from players when they spawn.
 hook.Add("PlayerSpawn", "PlayerSpawn.Remove.Shadows", function(player)
