@@ -1,8 +1,17 @@
 --Help boost players fps by disabling casting of dynamic shadows.
 hook.Add("InitPostEntityMap", "Remove.Shadow.Control", function()
-	--Remove shadow_control
+	local shadowexists = 0
+	--Disable shadow_control
 	for _, ent in pairs(ents.FindByClass("shadow_control")) do
-		ent:Remove()
+		ent:SetKeyValue("disableallshadows", 1)
+		shadowexists = 1
+	end
+	if shadowexists == 0 then
+		local ent = ents.Create("shadow_control")
+		if ent:IsValid() then
+			ent:SetKeyValue("disableallshadows", 1)
+			shadowexists = 1	
+		end
 	end
 	--Remove rain.
 	for _, ent in pairs(ents.FindByClass("func_precipitation")) do
