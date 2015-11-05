@@ -9,6 +9,27 @@ hook.Add("InitPostEntityMap", "Adding", function()
 			ent:Remove()
 		end
 	end
+
+	--Bridges in next section by default have about 10000 health so lets reduce that.
+	for k,v in pairs(ents.FindByModel("*17")) do
+	v:SetMaxHealth(2000)
+	end
+	for k,v in pairs(ents.FindByModel("*18")) do
+	v:SetMaxHealth(2500)
+	end
+	for k,v in pairs(ents.FindByModel("*19")) do
+	v:SetMaxHealth(2500)
+	end
+	for k,v in pairs(ents.FindByModel("*20")) do
+	v:SetMaxHealth(2500)
+	end
+	for k,v in pairs(ents.FindByModel("*21")) do
+	v:SetMaxHealth(2500)
+	end
+	for k,v in pairs(ents.FindByModel("*22")) do
+	v:SetMaxHealth(2000)
+	end
+	--End bridge health reduction.
 	end)
 	
 timer.Create("Stop throwing props out of bounds", 1, 0, function()
