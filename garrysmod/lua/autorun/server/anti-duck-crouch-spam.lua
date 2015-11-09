@@ -5,7 +5,12 @@ hook.Add("StartCommand", "StartCommand-anti-duck-crouch-spam", function(ply, cmd
 	--If allowduck is 0 then do not allow the player to crouch.
 	if allowduck == 0 then
 		--Remove the ability to crouch.
-		cmd:RemoveKey(IN_DUCK)
+		--cmd:RemoveKey(IN_DUCK)
+		--Force the player to stay crouched until the hit the ground.
+		if !ply:IsOnGround() then
+			--Force player to crouch.
+			cmd:SetButtons(IN_DUCK)
+		end
 	end
 	--If the player just came out of the crouch animation prevent them being able to crouch again.
 	if ply:KeyReleased(IN_DUCK) then
