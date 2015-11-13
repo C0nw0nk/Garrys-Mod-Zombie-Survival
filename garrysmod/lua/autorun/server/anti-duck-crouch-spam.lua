@@ -29,3 +29,7 @@ hook.Add("OnPlayerHitGround", "OnPlayerHitGround-anti-duck-crouch-spam", functio
 		player:SetNWInt('allowduck', 1)
 	end
 end)
+--When player joins the server create the network var to allow them to duck or not.
+hook.Add("PlayerInitialSpawn", "PlayerInitialSpawn-anti-duck-crouch-spam", function(player)
+	player:SetNWInt('allowduck', 1)
+end)
