@@ -51,7 +51,7 @@ hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 					--Check if attacker is using a melee weapon
 					--if attacker:GetActiveWeapon().IsMelee then
 						--Check that the entity prop class is not a door
-						if string.match(ent:GetClass(), "prop_door*") then
+						if string.match(ent:GetClass(), "prop_door*") or string.match(ent:GetClass(), "prop_creepernest*") then
 						--Do nothing
 						else
 						--Block the damage inflicted.
@@ -73,7 +73,7 @@ hook.Add("EntityTakeDamage", "EntityTakeDamage",  function(ent, attacker)
 						--Check if attacker is using a melee weapon
 						--if attacker:GetActiveWeapon().IsMelee then
 							--Check that the entity prop class is not a door
-							if string.match(ent:GetClass(), "prop_door*") then
+							if string.match(ent:GetClass(), "prop_door*") or string.match(ent:GetClass(), "prop_creepernest*") then
 							--Do nothing
 							else
 							--Block the damage inflicted.
