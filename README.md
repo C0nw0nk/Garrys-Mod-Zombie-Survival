@@ -6,10 +6,11 @@ Removing/altering the credits hook is a violation to the AGPLv3 License i have r
 
 
 Install these map profiles to the following directory you have zombie survival installed upon your local pc or server.
-"/garrysmod/gamemodes/zombiesurvival/gamemode/maps/*.lua"
+`"/garrysmod/gamemodes/zombiesurvival/gamemode/maps/*.lua"`
 
 
 # Server Auto Run Hook's Features :
+
 Prevented client side crashes by changing client console variables upon connection.
 
 Outputting to console who breaks a prop "all methods of attack including explosives and jumping ontop of the prop". (Players would do this then join the zombie team sabotaging humans survival.)
@@ -25,6 +26,7 @@ Prevented humans destroying guns or ammo on the floor. (Players would do this th
 Outputting to console who unails a dead persons cade. (Inside a piano cade on wave 6 and a Kliener picks up a hammer this is the worst thing in the world.)
 
 Fixed humans prop launching by nailing a prop down and launching with a prop they place or nail.(kills from one human killing another by launching a prop at them would be prop physics or func physbox.)
+##### If you encounter issues such as props bouncing all over the map (Physics engine crash) then delete this script : https://github.com/C0nw0nk/Garrys-Mod-Zombie-Survival/blob/master/garrysmod/lua/autorun/server/anti-prop-launch.lua
 
 Disabling casting of dynamic shadows to improve performance.
 
