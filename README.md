@@ -8,6 +8,9 @@ Removing/altering the credits hook is a violation to the AGPLv3 License i have r
 Install these map profiles to the following directory you have zombie survival installed upon your local pc or server.
 `"/garrysmod/gamemodes/zombiesurvival/gamemode/maps/*.lua"`
 
+For other fixes and added features to Zombie survival they can be found inside my fork : https://github.com/C0nw0nk/zombiesurvival
+
+If you are having issues with players bypassing bans i did a script for that too : https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing
 
 # Server Auto Run Hook's Features :
 
@@ -35,3 +38,4 @@ Fixed HL2 ladder death glitching. (Killing yourself on a ladder as soon as you p
 Fixed Humans and Zombies getting stuck inside of eachother or on their heads.
 
 Fixed players spamming crouch while in the air causing their hitbox to bounce up and down aswell as animation jitter.
+
