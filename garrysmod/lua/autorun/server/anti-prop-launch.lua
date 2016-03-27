@@ -6,7 +6,7 @@ hook.Add("InitPostEntityMap", "InitPostEntityMap.Anti.Prop.Launch", function()
 		--You can still prop kill as a zombie.
 		hook.Add("EntityTakeDamage", "Anti.Prop.Launch",  function(ent, attacker)
 			local attacker = attacker:GetAttacker()
-			if string.match(attacker:GetClass(), "prop_physics*") or string.match(attacker:GetClass(), "prop_door*") or string.match(attacker:GetClass(), "func_physbox*") and ent:IsValid() and ent:IsPlayer() then
+			if string.match(attacker:GetClass(), "prop_physics*") or string.match(attacker:GetClass(), "prop_door*") or string.match(attacker:GetClass(), "func_physbox*") or string.match(attacker:GetClass(), "prop_arsenalcrate*") or string.match(attacker:GetClass(), "prop_resupplybox*") or string.match(attacker:GetClass(), "prop_messagebeacon*") or string.match(attacker:GetClass(), "prop_gunturret*") or string.match(attacker:GetClass(), "prop_detpack*") or string.match(attacker:GetClass(), "prop_spotlamp*") and ent:IsValid() and ent:IsPlayer() then
 				return true
 			end
 		end)
