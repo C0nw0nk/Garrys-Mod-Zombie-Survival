@@ -18,6 +18,9 @@ Install these scripts to the `"/garrysmod/lua/autorun/"` folder.
 
 # Server Auto Run Hook's Features :
 
+#####Prevent players cheating with modified client side scripts to make wraiths visible.
+https://github.com/C0nw0nk/Garrys-Mod-Zombie-Survival/blob/master/garrysmod/lua/autorun/server/anti-wraith.lua
+
 #####Prevented client side crashes by changing client console variables upon connection.
 https://github.com/C0nw0nk/Garrys-Mod-Zombie-Survival/blob/master/garrysmod/lua/autorun/server/crash.lua
 
